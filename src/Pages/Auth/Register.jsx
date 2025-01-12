@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 
 export default function Register() {
@@ -45,21 +45,6 @@ export default function Register() {
         }
 
 
-        // try {
-        //     await authService.register(formData);
-        //     toast.success("Register berhasil!")
-        //     setTimeout(() => {
-        //         navigate('/login');
-        //     }, 1500);
-
-        // } catch (error) {
-        //     if (error.status === 422) {
-        //         setErrors(error.errors);
-        //     }
-        //     console.log('Registration failed:', error);
-        // } finally {
-        //     setLoading(false);
-        // }
     }
 
     return (
@@ -123,7 +108,7 @@ export default function Register() {
                     {loading ? 'Registering...' : "Register"}
                 </button>
             </form>
-            <Toaster position="top-right" />
+
         </>
     )
 }

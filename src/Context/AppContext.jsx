@@ -23,7 +23,6 @@ export default function AppProvider({ children }) {
                 setUser(data);
             } catch {
                 setUser(null);
-
             } finally {
                 setLoading(false)
             }
@@ -31,6 +30,7 @@ export default function AppProvider({ children }) {
 
         if (token) {
             getuser()
+            console.log()
         } else {
             setUser(null)
             setLoading(false);
