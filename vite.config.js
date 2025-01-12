@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => {
 		server: {
 			proxy: {
 				"/api": {
-					target: env.VITE_API_URL,
+					target: env.VITE_PUBLIC_URL,
 					changeOrigin: true,
 					headers: {
 						Accept: "application/json",
